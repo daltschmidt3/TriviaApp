@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp" >
+
+    <TextView
+        android:id="@+id/gameNum"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Game Number" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/gameNum"
+        android:layout_marginRight="15dp" 
+        android:stretchColumns="*">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:gravity="right"
+            android:layout_marginRight="5dp">
+            	
+            	<TextView 
+            	    android:id="@+id/yourScoreLabel"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginTop="5dp"
+			        android:textSize="12sp"
+			        android:text="Your Score:" />
+            	<TextView 
+            	    android:id="@+id/oppScoreLabel"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginTop="5dp"
+			        android:textSize="12sp"
+			        android:text="Opponent:" />
+            	
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:gravity="right"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/timeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Time:"
+                android:textSize="12sp" />
+
+            	<TextView 
+            	    android:id="@+id/yourTime"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginTop="5dp"
+			        android:textSize="12sp"
+			        android:text="2:30" />
+            	<TextView 
+            	    android:id="@+id/oppTime"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginTop="5dp"
+			        android:textSize="12sp"
+			        android:text="1:45" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:gravity="right"
+            android:layout_marginRight="5dp">
+            	<TextView 
+            	    android:id="@+id/correctLabel"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginTop="5dp"
+			        android:textSize="12sp"
+			        android:text="Correct:" />
+            	<TextView 
+            	    android:id="@+id/yourCorrect"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginTop="5dp"
+			        android:textSize="12sp"
+			        android:text="8/10" />
+            	<TextView 
+            	    android:id="@+id/oppCorrect"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginTop="5dp"
+			        android:textSize="12sp"
+			        android:text="7/10" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/gameStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gameNum"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:text="Large"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

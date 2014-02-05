@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8b035"
+    android:padding="16dp" >
+
+    <TextView
+        android:id="@android:id/text1"
+        style="?android:textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question 1"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@android:id/text1"
+        android:layout_alignRight="@android:id/text1"
+        android:layout_below="@android:id/text1"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1.52"
+        android:textSize="16dp"
+        android:text="Large Text" />
+
+    <Button
+        android:id="@+id/answer1Button"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/questionText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16dp"
+        android:text="Button"
+        style="@style/triviaAppButtonTheme" />
+
+    <Button
+        android:id="@+id/answer2Button"
+        style="@style/triviaAppButtonTheme"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_alignLeft="@+id/answer1Button"
+        android:layout_below="@+id/answer1Button"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/answer3Button"
+        style="@style/triviaAppButtonTheme"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_alignLeft="@+id/answer2Button"
+        android:layout_below="@+id/answer2Button"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/answer4Button"
+        style="@style/triviaAppButtonTheme"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_alignLeft="@+id/answer3Button"
+        android:layout_below="@+id/answer3Button"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:text="Button" />
+
+</RelativeLayout>

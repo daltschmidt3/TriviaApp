@@ -1,0 +1,10 @@
+<resources>
+
+    <declare-styleable name="CorrectQuestionView">
+        <attr name="numCorrect" format="string" />
+        <attr name="questionProgress" format="boolean"/>
+        <attr name="correctArray" format="reference"/>
+        <attr name="displayResults" format="boolean"/>
+    </declare-styleable>
+
+</resources>

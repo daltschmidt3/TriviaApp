@@ -1,0 +1,69 @@
+This Android app was created for Mike Scott's Mobile Development class at UT
+Austin Fall 2013 by Dalton Schmidt and Clay Tobolka. The intention of this 
+app was to create a platform to allow users to asynchronously challenge each
+other to a game, in this case, a trivia challenge.  My intention is to use 
+this platform to create other games (such as a race or math quiz) and allow 
+more than 2 people participate in a challenge.
+
+
+Libraries used in this app were:
+
+- PullToRefresh-Listview: https://github.com/erikwt/PullToRefresh-ListView
+- The Parse API and SDK for Complete back end support from user creation, 
+  login, interaction, and database:  https://www.parse.com/docs/android_guide
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+
+
+TriviaApp:
+
+Created by:  Clay Tobolka(cjt628) and Dalton Schmidt(dps585) for CS371 Mobile Computing at the University of Texas at Austin Fall 2013 Semester.
+
+How to setup environment for Beta Release:
+
+	Make sure that the PullToRefreshListView project is defined as a library
+	Make sure that the TriviaApp has the PullToRefreshListView as a library
+
+
+How To use the App:
+
+        Login/Signup Activity:
+
+          On a fresh install, the user is brought to a login screen. If the credentials are known, the user can
+          just login but there is a Sign up button that takes the user to a register screen.  The only credentials that the user
+          needs to enter to sign up are a username and password and email (No email verification needed).  The user information is cached so there is no
+          need to login again unless the user explicity logs out.
+
+          We have test accounts setup:
+
+                        username: test  password: 123
+                        username: test2 password 321
+
+
+        Main Activity:
+
+          The users main page is a list of all challenges and their current status/outcome.  If the user sees where he has been challenged,
+          all he has to do is click that item and he will be directed to the game activity where he will answer questions that the challenger
+          was asked.
+
+          There is a + button on the top right where the user can create a challenge.  From here he is directed to the New Game Activity
+
+
+        New Game Activity:
+
+          This activity has a list of all current people he can challenge.  To initiate a challenge, the user taps an opponent, chooses a
+          category and then initiates the game by pressing the "Start New Game Button".  From here the user is directed to the game activity
+          and is asked questions regarding the category.
+
+        Game Activity:
+
+          The game activity is initiated from two points of view, the challenger or the opponent.
+
+            Challenger:  The challenger is given a set of 10 questions that he must answer.  There is a running clock and a counter of the number
+                of questions he got right.  Once the user selects an answer, the screen quickly changes to the next question.  On the last question,
+                information about the game is saved (numCorrect, time, challenger, opponent, questions) to the database and the user is directed back
+                to the Main Activity and the game will be displayed saying that it is waiting for the opponent to complete the game.
+
+            Opponent:  The opponent will be asked the same questions as the challenger in the same manner.  The only difference is when the last question
+                is answered, the game is actually evaluated and the results are pushed to the database.  A Toast Message will popup noftifying the results
+                and the user will be redirected to the Main Activity and can see the completed challenge.

@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment" >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".SignUpActivity" >
+
+        <EditText
+            android:id="@+id/signUpPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="164dp"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/signUpButtonSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signUpPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="96dp"
+            android:text="Sign Up" />
+
+        <EditText
+            android:id="@+id/signUpUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/signUpPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="68dp"
+            android:ems="10"
+            android:hint="Username" />
+
+        <EditText
+            android:id="@+id/signUpEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/signUpUserName"
+            android:layout_below="@+id/signUpPassword"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:focusable="true"
+            android:hint="Email" />
+    </RelativeLayout>
+
+</FrameLayout>

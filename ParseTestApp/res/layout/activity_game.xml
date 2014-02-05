@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="create and send a random game"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/userList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/question"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:text="Pick the right Answer" />
+
+    <Button
+        android:id="@+id/choice1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:text="Not This one" />
+
+    <Button
+        android:id="@+id/choice2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:text="Not This one" />
+
+    <Button
+        android:id="@+id/choice3"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="This One!!!" />
+
+    <Button
+        android:id="@+id/choice4"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:text="Not This one" />
+    
+</LinearLayout>

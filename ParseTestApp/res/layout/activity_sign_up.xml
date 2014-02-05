@@ -1,0 +1,79 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8b035"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SignUpActivity" >
+
+     <TextView
+        android:id="@+id/logInTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signUpUserName"
+        android:layout_alignLeft="@+id/signUpUserName"
+        android:layout_alignRight="@+id/signUpUserName"
+        android:layout_marginBottom="25dp"
+        android:gravity="center_horizontal"
+        android:text="@string/logInTitle"
+        android:textStyle="bold"
+        android:textSize="30dp" />
+     
+    <EditText
+        android:id="@+id/signUpPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/signUpUserName"
+        android:layout_alignRight="@+id/signUpUserName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="164dp"
+        android:ems="10"
+        android:hint="Password"
+        android:layout_marginBottom="30dp"
+        android:singleLine="true"
+        android:inputType="textPassword" />
+
+
+    <Button
+        android:id="@+id/signUpButtonSignUp"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/signUpEmail"
+        android:textColor="#ffffff"
+        android:background="#433c32"
+        android:text="Sign Up"
+        android:textSize="16dp"
+        style="@style/triviaAppButtonTheme" />
+
+    <EditText
+        android:id="@+id/signUpUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/signUpPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:ems="10"
+        android:singleLine="true"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/signUpEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signUpUserName"
+        android:layout_alignRight="@+id/signUpUserName"
+        android:layout_below="@+id/signUpPassword"
+        
+        android:singleLine="true"
+        android:hint="Email" />
+
+</RelativeLayout>
+

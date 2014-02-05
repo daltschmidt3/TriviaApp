@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tobolkac.triviaapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.tobolkac.triviaapp.MainActivity"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tobolkac.triviaapp.LogInActivity"
+            android:label="@string/title_activity_log_in" >
+        </activity>
+        <activity
+            android:name="com.tobolkac.triviaapp.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName="com.tobolkac.triviaapp.LogInActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tobolkac.parsetestapp.LogInActivity" />
+        </activity>
+        <activity
+            android:name="com.tobolkac.triviaapp.NewGameActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:label="@string/title_activity_new_game"
+            android:parentActivityName="com.tobolkac.triviaapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tobolkac.parsetestapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.tobolkac.triviaapp.ScreenSlideActivity"
+            android:label="@string/app_name">
+            
+        </activity>
+        <activity
+            android:name="com.tobolkac.triviaapp.GameActivity"
+            android:label="@string/title_activity_new_game"
+            android:parentActivityName="com.tobolkac.triviaapp.NewGameActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tobolkac.parsetestapp.NewGameActivity" />
+        </activity>
+
+        <service android:name="com.parse.PushService"
+            android:icon="@drawable/ic_launcher" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver"
+            android:icon="@drawable/ic_launcher" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="FetchGameReciever" >
+            <intent-filter>
+                <action android:name="com.tobolkac.FETCH_GAME" >
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
